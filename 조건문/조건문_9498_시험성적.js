@@ -21,8 +21,6 @@ rl.on("close", () => {
     console.log("C");
   } else if (input[0] >= 60 && input[0] < 70) {
     console.log("D");
-  } else if (input[0] >= 50 && input[0] < 60) {
-    console.log("E");
   } else {
     console.log("F");
   }
