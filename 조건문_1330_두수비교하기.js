@@ -23,5 +23,5 @@ rl.on("close", () => {
   } else if (a < b) {
     console.log("<");
   }
-  process.exit();
+  process.exit(); // zz
 });
