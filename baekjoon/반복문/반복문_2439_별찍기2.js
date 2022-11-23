@@ -13,9 +13,14 @@ rl.on("line", (line) => {
 });
 
 rl.on("close", () => {
-  let star = "";
-  for (let i = 0; i < input[0]; i++) {
-    star += "*";
+  for (let i = 0; i < input; i++) {
+    let star = "";
+    for (let j = input - i - 1; j > 0; j--) {
+      star += " ";
+    }
+    for (let j = 0; j < i + 1; j++) {
+      star += "*";
+    }
     console.log(star);
   }
   process.exit();
