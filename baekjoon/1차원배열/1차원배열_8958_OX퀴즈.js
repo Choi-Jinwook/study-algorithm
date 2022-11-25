@@ -19,7 +19,7 @@ rl.on("line", (line) => {
   }
 }).on("close", () => {
   for (let i = 0; i < n; i++) {
-    let res = input[i].split("").map((el) => el);
+    let res = Array.from(input[i]);
     for (let j = 0; j < res.length; j++) {
       if (res[j] === "O") {
         add++;
