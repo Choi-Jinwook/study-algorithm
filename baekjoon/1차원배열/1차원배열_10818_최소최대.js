@@ -26,4 +26,5 @@ rl.on("line", (line) => {
     }
   }
   console.log(min + " " + max);
+  process.exit();
 });

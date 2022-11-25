@@ -22,4 +22,5 @@ rl.on("line", (line) => {
   location++;
   res += max + "\n" + location;
   console.log(res);
+  process.exit();
 });
