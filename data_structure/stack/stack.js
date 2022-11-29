@@ -22,6 +22,10 @@ class Stack {
     if (this.index === 0) return true;
     else return false;
   }
+  isFull() {
+    if (this.index !== 0) return true;
+    else return false;
+  }
   top() {
     return this.arr[this.index - 1];
   }
@@ -62,6 +66,8 @@ rl.on("line", (line) => {
       console.log(`top: ${stack.top()}`);
     } else if (input[i] === "isEmpty") {
       console.log(`isEmpty: ${stack.isEmpty()}`);
+    } else if (input[i] === "isFull") {
+      console.log(`isFull: ${stack.isFull()}`);
     } else {
       console.log("wrong input");
     }
