@@ -68,3 +68,10 @@ rl.on("line", (line) => {
   }
   process.exit();
 });
+
+/*
+push (number): stack.push(number)
+pop: stack.pop()
+top: stack.top()
+isEmpty: stack.isEmpty()
+*/
