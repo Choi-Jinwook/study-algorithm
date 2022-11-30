@@ -18,4 +18,5 @@ rl.on("line", (line) => {
     result += input[i];
   }
   console.log(result);
+  process.exit();
 });
