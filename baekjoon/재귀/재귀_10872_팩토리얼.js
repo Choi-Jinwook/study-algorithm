@@ -8,18 +8,18 @@ const rl = readline.createInterface({
 let n = 1;
 let i = 1;
 let result = 1;
-const fibo = (num) => {
+const facto = (num) => {
   if (num === 0) return 1;
   result *= i;
   i++;
   if (i > n) return result;
-  fibo(i);
+  facto(i);
 };
 
 rl.on("line", (line) => {
   n = parseInt(line);
 }).on("close", () => {
-  fibo(n);
+  facto(n);
   console.log(result);
   process.exit();
 });
