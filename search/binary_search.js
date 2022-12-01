@@ -36,4 +36,5 @@ rl.on("line", (line) => {
   }); // 처음 순서 기억
   sorted.sort((a, b) => a - b);
   binary_search(sorted, map, n);
+  process.exit();
 });
