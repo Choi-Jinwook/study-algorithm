@@ -12,7 +12,6 @@ const re = (cnt, n, m) => {
       check[i] = true;
       list[cnt] = i;
       re(cnt + 1, n, m);
-      console.log(check);
       check[i] = false;
     }
   }
