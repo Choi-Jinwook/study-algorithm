@@ -11,20 +11,38 @@ const graph = {
   J: ["I"],
 };
 
-const dfs = (graph, startNode) => {
-  const visited = [];
-  let needVisit = [];
+const visited = [];
+let needVisit = [];
 
-  needVisit.push(startNode);
+// while문 사용
+// const dfs = (graph, startNode) => {
+//   needVisit.push(startNode);
 
-  while (needVisit.length !== 0) {
-    const node = needVisit.shift();
-    if (!visited.includes(node)) {
-      visited.push(node);
-      needVisit = [...graph[node], ...needVisit];
-    }
+//   while (needVisit.length !== 0) {
+//     const node = needVisit.shift();
+//     if (!visited.includes(node)) {
+//       visited.push(node);
+//       needVisit = [...graph[node], ...needVisit];
+//     }
+//   }
+//   return visited;
+// };
+
+// console.log(dfs(graph, "A"));
+
+// 재귀 사용
+
+const dfs = (startNode, graph) => {
+  if (visited.length === 10) {
+    return console.log(visited);
   }
-  return visited;
+  needVisit.push(startNode);
+  const node = needVisit.shift();
+  if (!visited.includes(node)) {
+    visited.push(node);
+    needVisit = [...graph[node], ...needVisit];
+  }
+  dfs(node, graph);
 };
 
-console.log(dfs(graph, "A"));
+dfs("A", graph);
